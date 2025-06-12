@@ -1,0 +1,10 @@
+version: 1
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:ACCOUNT_ID:task-definition/python-task"
+        LoadBalancerInfo:
+          ContainerName: "python-app"
+          ContainerPort: 5000
+
