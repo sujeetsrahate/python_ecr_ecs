@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - REPOSITORY_URI=522814735019.dkr.ecr.us-east-1.amazonaws.com/python
+      - REPOSITORY_URI=522814735019.dkr.ecr.us-east-1.amazonaws.com/python-repo
       - IMAGE_TAG=latest
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
   build:
@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Pushing image...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - printf '[{"name":"container2","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"container-y","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 
 artifacts:
   files:
