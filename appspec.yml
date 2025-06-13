@@ -4,7 +4,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:235494811179:task-definition/kausu-tdf:1"
+        TaskDefinition: "arn:aws:ecs:us-east-1:026090548352:task-definition/python-tdf:1"
         LoadBalancerInfo:
           ContainerName: "kausu"
           ContainerPort: 5000
