@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Pushing image...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      - printf '[{"name":"karthik-y","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"kausu","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 
 artifacts:
   files:
