@@ -5,7 +5,7 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - REPOSITORY_URI=235494811179.dkr.ecr.us-east-1.amazonaws.com/kausu-ecr
+      - REPOSITORY_URI=026090548352.dkr.ecr.us-east-1.amazonaws.com/python
       - IMAGE_TAG=latest
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
   build:
